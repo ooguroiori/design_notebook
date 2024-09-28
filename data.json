@@ -1,0 +1,10 @@
+{
+"elements": [
+    {
+        "name": "サンプル",
+        "tag": ["button", "鮮やか"],
+        "html": "<button>サンプル</button>",
+        "css": "button { background-color: red; }"
+    }
+]
+}
