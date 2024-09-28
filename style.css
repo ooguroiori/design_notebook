@@ -1,6 +1,10 @@
 body{
-    background-color: rgb(31, 30, 30);
+    background-color: rgb(24, 24, 24);
     color:white;
+}
+
+#content{
+    display: flex;
 }
 
 #element{
