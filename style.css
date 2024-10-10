@@ -18,15 +18,37 @@ body{
     border-radius: 5px;
 }
 
+.coder{
+    width: 40%;
+    margin:0 20px;
+}
+
+.htmlline{
+    background-color: #183153;
+    margin: 0;
+}
+
+.imgico{
+    width:16px;
+}
 /* コード部分のスタイル */
 pre {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
+    margin-top: 0;
+    border-radius: 5px;
+    white-space: pre-wrap; /* 折り返しを有効に */
+    word-wrap: break-word; /* 長い単語を適切に折り返す */
+    background-color: #474747;
+    padding: 20px;
     overflow-x: auto;
 }
+
 code {
-    color: #d63384;
+    color: #4bd633;
+}
+
+#code-block{
+    display: flex;
+    justify-content: center;
 }
 
 /* From Uiverse.io by andrew-demchenk0 */ 

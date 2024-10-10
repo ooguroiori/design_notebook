@@ -34,8 +34,8 @@ fetch('./data.json')
             styleTag.innerHTML += element.css;
 
             // コードブロックとしてHTMLを表示（インデントを保持するために<pre>タグを使用）
-            htmlCode[index] = `<pre><code>${escapeHtml(element.html)}</code></pre>`;
-            cssCode[index] = `<pre><code>${escapeHtml(element.css)}</code></pre>`;
+            htmlCode[index] = `<div class="coder"><p class="htmlline"><img class="imgico" src="/img/html.png" alt="html" />HTML</p><pre><code>${escapeHtml(element.html)}</code></pre></div>`;
+            cssCode[index] = `<div class="coder"><p class="cssline"><img class="imgico" src="/img/css.png" alt="html" />CSS</p><pre><code>${escapeHtml(element.css)}</code></pre></div>`;
         });
 
         // チェックボックスにイベントリスナーを追加
@@ -65,6 +65,6 @@ function escapeHtml(text) {
 
 function codetool(index){
         // コードを表示するdivに追加
-        codeBlockDiv.innerHTML = `<h3>HTML:</h3>${htmlCode[index]}`;
-        codeBlockDiv.innerHTML += `<h3>CSS:</h3>${cssCode[index]}`;
+        codeBlockDiv.innerHTML = `${htmlCode[index]}`;
+        codeBlockDiv.innerHTML += `${cssCode[index]}`;
 }
