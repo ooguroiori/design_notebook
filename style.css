@@ -39,6 +39,16 @@ body{
     width:16px;
     padding-right: 5px;
 }
+
+.copypaste{
+    float: right;
+    filter: invert(100%);
+}
+
+.copypaste:hover{
+    filter: invert(50%);
+}
+
 /* コード部分のスタイル */
 pre {
     height: 100%;
