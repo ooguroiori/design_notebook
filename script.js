@@ -34,8 +34,8 @@ fetch('./data.json')
             styleTag.innerHTML += element.css;
 
             // コードブロックとしてHTMLを表示（インデントを保持するために<pre>タグを使用）
-            htmlCode[index] = `<div class="coder"><p class="htmlline"><img class="imgico" src="/img/html.png" alt="html" />HTML</p><pre><code>${escapeHtml(element.html)}</code></pre></div>`;
-            cssCode[index] = `<div class="coder"><p class="cssline"><img class="imgico" src="/img/css.png" alt="html" />CSS</p><pre><code>${escapeHtml(element.css)}</code></pre></div>`;
+            htmlCode[index] = `<div class="coder"><p class="headline"><img class="imgico" src="/img/html.png" alt="html" />HTML</p><pre><code>${escapeHtml(element.html)}</code></pre></div>`;
+            cssCode[index] = `<div class="coder"><p class="headline"><img class="imgico" src="/img/css.png" alt="html" />CSS</p><pre><code>${escapeHtml(element.css)}</code></pre></div>`;
         });
 
         // チェックボックスにイベントリスナーを追加
