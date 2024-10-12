@@ -4,6 +4,7 @@ var codeBlockDiv;
 var styleTag;
 var htmlCode = [];
 var cssCode = [];
+var width;
 
 fetch('./data.json')
     .then(response => response.json())
@@ -18,7 +19,14 @@ fetch('./data.json')
             var unique = `element-${index}`; // 各要素にユニークなクラス名を付ける
 
             // HTMLの挿入
-            contentDiv.innerHTML += `<div id="${unique}" class="${unique}" style="background-color: ${check ? 'black' : 'white'};"
+            contentDiv.innerHTML += `<div id="${unique}" class="${unique}"
+                                    style="background-color: ${check ? 'black' : 'white'}; 
+                                    width: 320px;
+                                    height: 200px;
+                                    display flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    "
                                     onclick="(function(){
                                     let val = ${index};
                                     codetool(val)
@@ -31,7 +39,6 @@ fetch('./data.json')
                                             <span class="slider"></span>
                                         </label>
                                     </div>`;
-
             // 各要素に対してCSSを適用
             // element.cssから@keyframesと@importを分離
             const keyframesRegex = /@keyframes[^{]+\{(?:[^}]+\{[^}]+\})+[^}]+\}/g;
@@ -49,7 +56,6 @@ fetch('./data.json')
 
             // 各要素に対してCSSを適用
             styleTag.innerHTML += `.${unique} { ${normalCss} }`;
-            console.log(styleTag.innerHTML);
 
             // @keyframesと@importがある場合、それらを個別に追加
             if (keyframes) {
@@ -99,10 +105,8 @@ function codetool(index){
         codeBlockDiv.innerHTML += `${cssCode[index]}`;
 }
 
-function copyButton(elementId) {
-    // 指定したIDの要素のテキストを取得
-    var element = document.getElementById(elementId);
-
-    // テキストをクリップボードにコピー
-    navigator.clipboard.writeText(element.textContent);
+function checkScreenSize() {
+    const width = window.innerWidth;
+    // widthを別のメソッドに渡す
+    applyResponsiveDesign(width);
 }

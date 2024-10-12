@@ -7,17 +7,6 @@ body{
     display: flex;
 }
 
-#element{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:10px;
-    width: 350px;
-    height: 230px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-}
-
 .coder{
     width: 40%;
     height: 600px;
@@ -191,4 +180,8 @@ box-shadow: 0 0 1px #183153;
 
 .input:checked + .slider:before {
 transform: translateX(30px);
+}
+
+@media screen and (max-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
 }
