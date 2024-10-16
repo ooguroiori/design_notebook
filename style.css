@@ -3,8 +3,16 @@ body{
     color:white;
 }
 
+.container{
+    width: 100%; /* 画面幅に合わせて親要素を設定 */
+    box-sizing: border-box;
+}
+
 #content{
     display: flex;
+    width: 100%; /* 横スクロール部分を100%幅に設定 */
+    overflow-x: auto; /* 横スクロールを有効にする */
+    white-space: nowrap; /* 子要素を折り返さないようにする */
 }
 
 .coder{
@@ -73,13 +81,16 @@ code {
 }
 
 /* From Uiverse.io by andrew-demchenk0 */ 
+.lighting{
+    position: relative;
+    margin-top: 100px;
+}
+
 .switch {
     font-size: 17px;
     position: absolute;
     width: 64px;
     height: 34px;
-    margin-top: 150px;
-    margin-left: 230px;
 }
 
 .switch input {
