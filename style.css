@@ -3,6 +3,45 @@ body{
     color:white;
 }
 
+/* From Uiverse.io by xetrov47 */ 
+.search {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.search__input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #767676;
+    color: #767676;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: -2.0rem;
+    height: 30px;
+    width: 15rem;
+}
+
+.search__input::-webkit-input-placeholder {
+    font-weight: 400;
+    color: #767676;
+    font-size: 14px;
+}
+
+.search__button {
+    border: none;
+    background-color: #fff;
+    margin-top: 0.1em;
+}
+
+.search__button:hover {
+    cursor: pointer;
+}
+
+.search input:focus {
+    outline: none;
+}
+
 .container{
     width: 100%; /* 画面幅に合わせて親要素を設定 */
     box-sizing: border-box;
@@ -13,6 +52,22 @@ body{
     width: 100%; /* 横スクロール部分を100%幅に設定 */
     overflow-x: auto; /* 横スクロールを有効にする */
     white-space: nowrap; /* 子要素を折り返さないようにする */
+}
+
+.card{
+    width: 280px;
+    margin:20px;
+    flex-shrink: 0; /* 子要素の幅を固定する */
+}
+
+.cardtheme{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:20px 0;
+    background-color: rgb(96, 228, 160);
+    color: black;
+    border-radius: 0 0 10px 10px;
 }
 
 .coder{
@@ -78,12 +133,13 @@ code {
 #code-block{
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 /* From Uiverse.io by andrew-demchenk0 */ 
 .lighting{
     position: relative;
-    margin-top: 100px;
+    margin-right: 70px;
 }
 
 .switch {
@@ -195,4 +251,14 @@ transform: translateX(30px);
 
 @media screen and (max-width:1024px) {
     /*　画面サイズが1024pxからはここを読み込む　*/
+
+    #code-block{
+        display: block;
+        margin-bottom: 0px;
+    }
+
+    .coder{
+        width: 80%;
+        margin-bottom: 150px;
+    }
 }

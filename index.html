@@ -11,17 +11,33 @@
     <title>I.Oのデザイン備忘録</title>
 </head>
 <body>
-    <h1>動的に生成されたHTMLとCSS</h1>
+    <div class="search">
+    <input placeholder="Search" class="search__input" type="text" />
+    <button class="search__button">
+        <svg
+        viewBox="0 0 16 16"
+        class="bi bi-search"
+        fill="currentColor"
+        height="16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+        >
+        <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+        ></path>
+        </svg>
+    </button>
+    </div>
+
     <div id="content">
         <!-- JSONのHTMLがここに挿入されます -->
     </div>
-    <h2>コード表示</h2>
     <div class="container">
         <div id="code-block">
             <!-- JSONのHTMLとCSSコードがここに挿入されます -->
         </div>
     </div>
-    <h2>ふったー</h2>
+    <footer></footer>
     <script src="script.js"></script>
 </body>
 </html>
