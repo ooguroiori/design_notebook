@@ -64,9 +64,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding:20px 0;
-    background-color: rgb(96, 228, 160);
-    color: black;
+    background-image: linear-gradient(31deg, rgba(19, 0, 48, 1), rgba(64, 0, 133, 1) 51%, rgba(88, 0, 191, 1));
     border-radius: 0 0 10px 10px;
 }
 
@@ -140,6 +138,7 @@ code {
 .lighting{
     position: relative;
     margin-right: 70px;
+    margin-top: 10px;
 }
 
 .switch {
