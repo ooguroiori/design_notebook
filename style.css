@@ -108,6 +108,10 @@ body{
     transition: 0.1s;
 }
 
+.wrapper{
+    display:flex;
+}
+
 /* コード部分のスタイル */
 pre {
     height: 100%;
