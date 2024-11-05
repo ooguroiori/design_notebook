@@ -109,6 +109,16 @@ function escapeHtml(text) {
         .replace(/'/g, "&#039;");
 }
 
+function copyButton(copyId) {
+    const copyText = document.getElementById(copyId);
+    navigator.clipboard.writeText(copyText.textContent || copyText.innerText).then(() => {
+        alert("コピーされました！");
+    }).catch(err => {
+        console.error("コピーに失敗しました: ", err);
+    });
+}
+
+
 function codetool(index){
         // コードを表示するdivに追加
         codeBlockDiv.innerHTML = `${htmlCode[index]}`;
