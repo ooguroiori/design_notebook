@@ -1,0 +1,276 @@
+body{
+    background-color: rgb(24, 24, 24);
+    color:white;
+}
+
+/* From Uiverse.io by xetrov47 */ 
+.search {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.search__input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #767676;
+    color: #767676;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: -2.0rem;
+    height: 30px;
+    width: 15rem;
+}
+
+.search__input::-webkit-input-placeholder {
+    font-weight: 400;
+    color: #767676;
+    font-size: 14px;
+}
+
+.search__button {
+    border: none;
+    background-color: #fff;
+    margin-top: 0.1em;
+}
+
+.search__button:hover {
+    cursor: pointer;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.container{
+    width: 100%; /* 画面幅に合わせて親要素を設定 */
+    box-sizing: border-box;
+}
+
+#content{
+    display: flex;
+    width: 100%; /* 横スクロール部分を100%幅に設定 */
+    overflow-x: auto; /* 横スクロールを有効にする */
+    white-space: nowrap; /* 子要素を折り返さないようにする */
+}
+
+.card{
+    width: 280px;
+    margin:20px;
+    flex-shrink: 0; /* 子要素の幅を固定する */
+}
+
+.cardtheme{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(31deg, rgba(19, 0, 48, 1), rgba(64, 0, 133, 1) 51%, rgba(88, 0, 191, 1));
+    border-radius: 0 0 10px 10px;
+}
+
+.coder{
+    width: 40%;
+    height: 600px;
+    margin: 20px;
+}
+
+.headline{
+    width:150px;
+    padding:0 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #383838;
+    border-radius: 5px 5px 0 0;
+    margin: 0 10px;
+}
+
+.imgico{
+    width:16px;
+    padding-right: 5px;
+}
+
+.copypaste{
+    float: right;
+    filter: invert(100%);
+}
+
+.copypaste:hover{
+    filter: invert(50%);
+    transform: scale(1.3);
+    transition: 0.2s;
+}
+
+.copypaste:active{
+    filter: invert(100%);
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+.wrapper{
+    display:flex;
+}
+
+/* コード部分のスタイル */
+pre {
+    height: 100%;
+    margin-top: 0;
+    border-radius: 5px;
+    white-space: pre-wrap; /* 折り返しを有効に */
+    word-wrap: break-word; /* 長い単語を適切に折り返す */
+    background-color: #474747;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+/* スクロールバーのスタイル */
+pre::-webkit-scrollbar {
+    width: 8px;
+    background-color: #333333; 
+}
+
+/* スクロールバーの中身のスタイル */
+pre::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    width: 8px;
+    border-radius: 5px;
+}
+
+code {
+    color: #4bd633;
+}
+
+#code-block{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.lighting{
+    position: relative;
+    margin-right: 70px;
+    margin-top: 10px;
+}
+
+.switch {
+    font-size: 17px;
+    position: absolute;
+    width: 64px;
+    height: 34px;
+}
+
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #73C0FC;
+transition: .4s;
+border-radius: 30px;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 30px;
+width: 30px;
+border-radius: 20px;
+left: 2px;
+bottom: 2px;
+z-index: 2;
+background-color: #e8e8e8;
+transition: .4s;
+}
+
+.sun svg {
+position: absolute;
+top: 6px;
+left: 36px;
+z-index: 1;
+width: 24px;
+height: 24px;
+}
+
+.moon svg {
+fill: #73C0FC;
+position: absolute;
+top: 5px;
+left: 5px;
+z-index: 1;
+width: 24px;
+height: 24px;
+}
+
+/* .switch:hover */.sun svg {
+animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+
+0% {
+    transform: rotate(0);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+}
+
+/* .switch:hover */.moon svg {
+animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+
+0% {
+    transform: rotate(0deg);
+}
+
+25% {
+    transform: rotate(-10deg);
+}
+
+75% {
+    transform: rotate(10deg);
+}
+
+100% {
+    transform: rotate(0deg);
+}
+}
+
+.input:checked + .slider {
+background-color: #183153;
+}
+
+.input:focus + .slider {
+box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+transform: translateX(30px);
+}
+
+@media screen and (max-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+
+    #code-block{
+        display: block;
+        margin-bottom: 0px;
+    }
+
+    .coder{
+        width: 80%;
+        margin-bottom: 150px;
+    }
+}

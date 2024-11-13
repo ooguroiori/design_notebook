@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(24, 24, 24);
+    color:white;
+}
+
+.wrapper{
+    display: flex;
+    gap:10px;
+}
+
+.wrapper .card{
+    background-color: rgb(167, 53, 161);
+    border-radius: 6px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wrapper:hover > :not(:hover){
+    filter: blur(5px);
+    opacity: 0.5;
+}
